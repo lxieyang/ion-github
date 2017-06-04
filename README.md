@@ -7,6 +7,11 @@
 <img src="preview/ios-1.gif" alt="Drawing" width="250"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="preview/ios-2.gif" alt="Drawing" width="250"/>
 
+### Android
+
+<img src="preview/android-1.gif" alt="Drawing" width="250"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="preview/android-2.gif" alt="Drawing" width="250"/>
+
 ## Development
 
 ### Start an ionic project
