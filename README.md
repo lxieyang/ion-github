@@ -73,10 +73,7 @@ ionic cordova run android
 
 To deploy to an iOS device in debug mode:
 
-1. 
-```sh
-ionic cordova build ios --prod
-```
+1. `ionic cordova build ios --prod`
 2. Open the `.xcodeproj` file in `platforms/ios/` in Xcode
 3. Connect your phone via USB and select it as the run target
 4. Click the play button in Xcode to try to run your app
