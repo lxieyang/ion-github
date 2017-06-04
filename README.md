@@ -4,8 +4,8 @@
 
 ### iOS
 
-<img src="preview/ios-1.gif" alt="Drawing" style="width: 200px;"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="preview/ios-2.gif" alt="Drawing" style="width: 200px;"/>
+<img src="preview/ios-1.gif" alt="Drawing" width="200"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="preview/ios-2.gif" alt="Drawing" width="200"/>
 
 ## Development
 
