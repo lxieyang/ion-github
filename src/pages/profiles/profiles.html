@@ -1,0 +1,129 @@
+<!--
+  Generated template for the ProfilesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Github Profiles</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <form (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label floating>Github User:</ion-label>
+        <ion-input type="text"[(ngModel)]="github_user" name="github_user"></ion-input>
+      </ion-item>
+      <br/>
+      <button ion-button small clear type="submit">Search</button>
+    </form>
+    <button ion-button small clear (click)="reset()">Clear</button>
+  </ion-card>
+
+
+  <ion-card *ngIf="is_searching">
+    <div *ngIf="is_result_came_back; else spinner">
+      <div *ngIf="profiles; else noSuchUser">
+        <ion-item>
+        <ion-avatar item-left (click)="showProfile(profiles)">
+          <img src="{{profiles.avatar_url}}">
+        </ion-avatar>
+        <h2 (click)="showProfile(profiles)"><strong>{{profiles.name}}</strong> ({{profiles.login}})</h2>
+        <p>{{profiles.location}}</p>
+      </ion-item>
+
+      <ion-card-content>
+        <p>{{profiles.bio}}</p>
+      </ion-card-content>
+
+      <ion-row>
+        <ion-col>
+          <button ion-button ion-icon clear small (click)="showFollowers(profiles.login)">
+            <ion-icon name="person"></ion-icon>
+            <div>&nbsp;{{profiles.followers}} Followers</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button ion-icon clear small (click)="showRepos(profiles.login)">
+            <ion-icon name="git-branch"></ion-icon>
+            <div>&nbsp;{{profiles.public_repos}} Public Repos</div>
+          </button>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="profiles.company">
+        <ion-col padding>
+          <ion-note>
+            {{profiles.company}}
+          </ion-note>
+        </ion-col>
+      </ion-row>
+      </div>
+    </div>
+  </ion-card>
+
+  
+
+  <ion-card *ngIf="profiles && followers">
+    <div *ngIf="is_further_results_came_back; else spinner">
+      <div *ngIf="followers; else noFollowers">
+        <ion-list>
+          <ion-item *ngFor="let follower of followers" (click)="showProfile(follower)">
+            <ion-avatar item-left>
+              <img src="{{follower.avatar_url}}">
+            </ion-avatar>
+            <h2>{{follower.login}}</h2>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </ion-card>
+
+
+
+  <ion-card *ngIf="profiles && repos">
+    <div *ngIf="is_further_results_came_back; else spinner">
+      <div *ngIf="repos; else noRepos">
+        <ion-list>
+          <ion-item *ngFor="let repo of repos" (click)="repoTapped($event, repo)">
+            <h2>{{repo.name}}</h2>
+            <p>{{repo.description}}</p>
+            <div  item-right>
+              <ion-badge>{{repo.stargazers_count}}</ion-badge>
+              <ion-badge color="secondary">{{repo.language}}</ion-badge>
+            </div>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </ion-card>
+
+
+
+
+  <!-- ng-templates for no results found -->
+  <ng-template #spinner>
+    <div text-center padding>
+      <ion-spinner></ion-spinner>
+    </div>
+  </ng-template>
+
+  <ng-template #noSuchUser>
+    <h2 text-center padding>Sorry, no such user on Github!</h2>
+  </ng-template>
+
+  <ng-template #noFollowers>
+    <h2 text-center padding>Sorry, no followers found!</h2>
+  </ng-template>
+
+  <ng-template #noRepos>
+    <h2 text-center padding>Sorry, no public repos found!</h2>
+  </ng-template>
+  
+
+</ion-content>
