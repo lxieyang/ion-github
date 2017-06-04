@@ -90,7 +90,7 @@
     <div *ngIf="is_further_results_came_back; else spinner">
       <div *ngIf="repos; else noRepos">
         <ion-list>
-          <ion-item *ngFor="let repo of repos" (click)="repoTapped($event, repo)">
+          <ion-item text-wrap *ngFor="let repo of repos" (click)="repoTapped($event, repo)">
             <h2>{{repo.name}}</h2>
             <p>{{repo.description}}</p>
             <div  item-right>
