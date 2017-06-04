@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { GithubServiceProvider } from '../providers/github-service/github-service';
 import { HttpModule } from '@angular/http';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
   imports: [
     BrowserModule,
     HttpModule,
+    IonicImageViewerModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
