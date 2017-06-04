@@ -8,10 +8,47 @@
 
 <ion-content>
   <ion-list>
-    <ion-list-header>Follow me on Facebook</ion-list-header>
-    <ion-item>
+    <ion-list-header>Follow me on:</ion-list-header>
+
+    <ion-item (click)="showFacebook()">
       <ion-icon name="logo-facebook" item-left></ion-icon>
       @Xieyang Liu
     </ion-item>
+    <ion-item (click)="showInstagram()">
+      <ion-icon name="camera" item-left></ion-icon>
+      @xieyangl
+    </ion-item>
+    <ion-item (click)="showGithub()">
+      <ion-icon name="logo-github" item-left></ion-icon>
+      @lxieyang
+    </ion-item>
+    <ion-item (click)="showPersonalWebsite()">
+      <ion-icon name="planet" item-left></ion-icon>
+      lxieyang.github.io
+    </ion-item>
   </ion-list>
+
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="img/lxieyang-avatar.jpg">
+      </ion-avatar>
+      <h2>Xieyang (Michael) Liu</h2>
+      <p>Jun 12, 1995</p>
+    </ion-item>
+
+    <img src="img/lxieyang-run-like-forest.jpg">
+
+    <ion-card-content>
+      <p>
+        <strong>University of Michigan</strong><br>
+        <strong>Electrical Engineering and Computer Science Department</strong><br>
+        2260 HAYWARD ST <br>
+        Ann Arbor MI, 48109 <br>
+        <strong>P:</strong> (734) 741-3585<br>
+        <strong>E:</strong> lxieyang@umich.edu
+      </p>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

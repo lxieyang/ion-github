@@ -10,8 +10,8 @@ export class RepoDetailsPage {
   selectedRepo: any;
 
   constructor(public navCtrl: NavController, 
-  public navParams: NavParams,
-  private iab: InAppBrowser) {
+    public navParams: NavParams,
+    private iab: InAppBrowser) {
     this.selectedRepo = navParams.get('repo');
   }
 
