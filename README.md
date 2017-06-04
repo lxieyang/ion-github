@@ -1,5 +1,12 @@
 # Ion Github - a simple ionic-angular project CLI guide
 
+## App preview
+
+### iOS
+
+<img src="preview/ios-1.gif" alt="Drawing" style="width: 45%;"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="preview/ios-2.gif" alt="Drawing" style="width: 45%;"/>
+
 ## Development
 
 ### Start an ionic project
