@@ -30,7 +30,7 @@
   <ion-card *ngIf="is_searching">
     <div *ngIf="is_result_came_back; else spinner">
       <div *ngIf="profiles; else noSuchUser">
-        <ion-item>
+        <ion-item text-wrap>
         <ion-avatar item-left (click)="showProfile(profiles)">
           <img src="{{profiles.avatar_url}}">
         </ion-avatar>
